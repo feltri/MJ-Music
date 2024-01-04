@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MJ Music</title>
+
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+
+     <style type="text/css">
+
+          @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Oxygen:wght@300&family=Quicksand:wght@300&family=Rufina&display=swap'); /*TITULO*/
+
+          @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Oxygen:wght@300&family=Quicksand:wght@300&family=Roboto:wght@300&family=Rufina&display=swap'); /*CORPO*/
+
+
+          body{
+               font-family: Oxygen;
+               font-weight: bold;
+               color: white;
+               margin: 0px;
+               margin-top: 0px;
+               background-color: #162437;
+               font-size: 15px;
+          }
+
+          #cima{
+               height: 70px;
+               padding: 10px;
+               width: 100%;
+               top: 0;
+               position: fixed;
+               display: flex;
+               align-items: center;
+               background-color: #1B2B40;
+               z-index: 1;
+          }
+
+          #menu{
+               top: 0;
+               height: 100%;
+               width: 220px;
+               position: fixed;
+               background: #1F3149;
+               z-index: 1;
+          }
+
+          #logo{
+               padding-top: 15px;
+               padding-bottom: 6px;
+               padding-left: 10px;
+               padding-right: 5px;
+               display: flex;
+               align-items: flex-start;
+          }
+
+          .logo{
+               font-family: Barlow;
+               font-weight: 600;
+               color: white;
+               font-size: 30px;
+               margin-top: 15px;
+               margin-left: 10px;
+               align-items: flex-start;
+          }
+         
+
+          .musica{
+               height: 700px;
+               width: 20%;
+               padding: 10px;
+               top: 0;
+               position: relative;
+               background-color: rgba(66, 113, 175, 0.3);
+
+               margin-left: 25px;
+               margin-right: 25px;
+
+               border-top-left-radius: 5px;
+               border-top-right-radius: 5px;
+               border-bottom-right-radius: 5px;
+               border-bottom-left-radius: 5px;
+
+          }
+
+          hr{
+               display: block; 
+               height: 1px;
+               border: 0; 
+               border-top: 0.1px solid white;
+               width: 180px;
+          }
+
+          .material-icons{
+               color: #8F969F;
+               font-size: 20px;
+          }
+
+          #menubusca{
+               padding-top: 5px;
+               padding-left: 15px;
+               padding-bottom: 15px;
+               display: flex;
+               align-items: flex-start;
+          }
+
+          #menuhome{
+               padding-top: 15px;
+               padding-left: 15px;
+               display: flex;
+               align-items: flex-start;
+          }
+
+          .menubusca{
+               padding-left: 15px;
+               padding-top: 4px;
+               font-family: Oxygen;
+               font-size: 15px;
+               font-weight: bold;
+               color: #8F969F;
+               margin: 0px;
+               margin-top: 0px;
+          }
+
+          .atual{
+               color: white;
+               padding-left: 15px;
+               padding-top: 4px;
+               font-family: Oxygen;
+               font-size: 15px;
+               font-weight: bold;
+               margin: 0px;
+               margin-top: 0px;
+          }
+
+          #atual{
+               color: white;
+          }
+
+          h1{
+               font-family: Barlow;
+               font-weight: 600;
+               color: white;
+               font-size: 30px;
+               margin-top: 15px;
+               margin-left: 10px;
+               align-items: flex-start;
+               padding-left: 10px;
+          }
+
+          #generos{
+               margin-left: 0px;
+               color: #8F969F;
+               text-decoration: none;
+          }
+
+          #body{
+               margin-left: 270px;
+               margin-right: 50px;
+          }
+
+          .music{
+               background-color: #1B2B40;
+               height: 330px;
+               width: 195px;
+               padding-left: 10px;
+               padding-right: 10px;
+               padding-top: 10px;
+               border-radius: 10px;
+               margin-right: 9px;
+          }
+
+          .foto-musica{
+               width: 195px;
+               margin-bottom: 0px;
+               border-radius: 10px;
+          }
+
+          h3{
+               font-family: Oxygen;
+               font-weight: bold;
+               font-size: 12px;
+               color: white;
+               padding-bottom: 10px;
+          }
+
+         .titulo_generos {
+           font-family: Barlow;
+           font-size: 30px;
+         }
+
+         .plyr--audio .plyr__controls {
+            background: #1F3149 !important;
+            border: none !important;
+            box-shadow: none !important;
+            color: white !important;
+            width: 195px;
+            border-radius: 5px !important;
+          }
+
+          .plyr--audio .plyr__progress--played {
+            background: transparent !important;
+          }
+
+          .plyr--audio .plyr__progress--buffer {
+            background: transparent !important;
+          }
+
+          .plyr--audio .plyr__progress--seek {
+            background: transparent !important;
+          }
+
+          ul{
+                list-style-type: none;
+            }
+
+          li:before{
+               content: 'arrow_right';
+               font-family: 'Material Icons';
+               color: white;
+          }
+
+          .material-symbols-outlined{
+               font-size: 20px;
+               color: white;
+          }
+
+          .row{
+               display: flex; 
+               padding-bottom: 30px;
+          }
+
+          #Eletrônica{
+               margin-top: 120px;
+               margin-bottom: 20px;
+          }
+
+          .hr-body{
+               width: 1560px;
+          }
+
+          #busca{
+            background-color:white;
+            border:solid 1px;
+            border-radius:10px;
+            width:300px;
+            margin-left: 260px;
+            position: fixed;
+          }
+
+          #txtBusca{
+            float:left;
+            background-color:transparent;
+            padding-left:5px;
+
+            font-size:18px;
+            border:none;
+            height:32px;
+            width:260px;
+
+               font-family: Oxygen;
+               font-weight: bold;
+               color: #162437;
+               font-size: 15px;
+          }
+
+          #btnBusca{
+               width: 30px;
+          }
+
+          #login{
+               background-color: white;
+               height:32px;
+               width:100px;
+               border-radius: 30px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 5px;
+               text-decoration: none;
+               color: black;
+          }
+
+          #cadastro-login{
+               color: #162437;
+               align-items: center;
+               float:right;
+               margin-bottom: 0px;
+               display: flex;
+               align-items: center;
+               margin-left: 86%;
+          }
+
+          a:hover{ /*mouse em cima*/
+               color: white;
+               font-size: 16px;
+               }
+
+          a{
+               color: currentColor;
+               text-decoration: none;
+          }
+
+          #cadastro-login a:hover{
+               color: #8F969F;
+          }
+
+          #cadastre{
+               color: white;
+          }
+
+          #login:hover{
+               height:35px;
+               width:103px;
+               font-size: 16px;
+               color: #8F969F;
+          }
+
+          .logo:hover{
+               font-size: 30px;
+          }
+
+
+     </style>
+
+     <link rel="icon" href="imagens/logo.png" sizes="16x16">
+</head>
+
+
+<body>
+
+
+
+     <div id="cima">
+          <div id="busca">
+            <input type="text" id="txtBusca">
+            <img src="imagens/lupa.png" id="btnBusca" alt="Buscar">
+          </div>
+
+          <div id="cadastro-login">
+               <a href="cadastro.html" id="cadastre">Cadastre-se</a>
+               <div id="login" align="right"><a href="login.html">Entrar</a></div>
+          </div>
+     </div>
+
+     
+
+     <div id="menu">
+          <div id="logo">
+               <img src="imagens/logo.png" id="foto-logo" width="60px" title="MJ Music">
+               <a class="logo">MJ Music</a>
+          </div>
+               
+               <hr>
+
+          <div id="menuhome">
+               <span class="material-icons" id="atual">home</span>
+               <h2 class="atual">Home</h2>
+          </div> <!--home-->
+
+          <div id="menubusca">
+               <span class="material-symbols-outlined">workspace_premium</span>
+               <a href="premium.html" class="menubusca">Premium</a>
+          </div><!--busca-->
+
+
+          <hr>
+
+          <h1>Gêneros</h1>
+
+          <div id="generos">
+               <ul>
+                    <li><a href="#Eletrônica" >Eletrônica</a></li>
+                    <li><a href="#Funk" >Funk</a></li>
+                    <li><a href="#Hip Hop" >Hip Hop</a></li>
+                    <li><a href="#Jazz" >Jazz</a></li>
+                    <li><a href="#Kpop" >Kpop</a></li>
+                    <li><a href="#MPB" >MPB</a></li>
+                    <li><a href="#Pagode" >Pagode</a></li>
+                    <li><a href="#Pop" >Pop</a></li>
+                    <li><a href="#Rap" >Rap</a></li>
+                    <li><a href="#Reggae" >Reggae</a></li>
+                    <li><a href="#Rock" >Rock</a></li>
+                    <li><a href="#Samba" >Samba</a></li>
+                    <li><a href="#Sertanejo" >Sertanejo</a></li>
+                    <li><a href="#Trap" >Trap</a></li>
+               </ul>   
+          </div> <!--Gêneros-->
+     </div><!--Menu-->
+     
+
+<div id="body">
+
+     <h2 id="Eletrônica" class="titulo_generos">Eletrônica</h2>
+     <div class="row">
+          
+          <div class="music">
+               <img src="imagens/musicas/eletronica/navespacial.jpeg" class="foto-musica">
+
+               <h3>Nave Espacial<br>Liu, Samantha Machado</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/eletronica/navespacial.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/eletronica/peter pan.jpg" class="foto-musica">
+
+               <h3>Peter Pan<br>Groove Delight, Samantha Machado</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/eletronica/peterpan.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/eletronica/Alok.jfif" class="foto-musica">
+
+               <h3>2 Much 2 Handle<br>Alok e Steve Aoki</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/eletronica/Alok.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/eletronica/Marshmello.jfif" class="foto-musica">
+
+               <h3>Stars<br>Marshmello</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/eletronica/Marshmello.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/eletronica/My.jfif" class="foto-musica">
+
+               <h3>My Neck, My Back<br>KVSH, Reezer</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/eletronica/My.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/eletronica/Sevenn.jfif" class="foto-musica">
+
+               <h3>Relax My Eyes<br>Sevenn</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/eletronica/Sevenn.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/eletronica/Dimitri.jfif" class="foto-musica">
+
+               <h3>Tremor<br>Dimitri Vegas, Martin Garrix</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/eletronica/Dimitri.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+
+     <h2 id="Funk" class="titulo_generos">Funk</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/funk/canto.jpg" class="foto-musica">
+
+               <h3>Conto da Sereia<br>MC Menor da VG</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/funk/canto.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/funk/ilusao.jpg" class="foto-musica">
+
+               <h3>Ilusão<br>Alok, MC Hariel, MC Davi, MC Ryan</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/funk/ILUSAO.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/funk/grave.jpg" class="foto-musica">
+
+               <h3>O Grave Bater<br>Mc Kevinho</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/funk/grave.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/funk/Obrigado.jpg" class="foto-musica">
+
+               <h3>Obrigado Deus<br>MC Lipi e MC Paulin da Capital</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/funk/Obrigado.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/funk/oq.jpg" class="foto-musica">
+
+               <h3>O Que Você Faria<br>Mc PP da VS</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/funk/oq.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/funk/sereia.jpg" class="foto-musica">
+
+               <h3>Sereia Me Perdoa<br>MC Ryan SP</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/funk/sereia.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/funk/tropa.jpg" class="foto-musica">
+
+               <h3>Tropa do H<br>Mc Hariel</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/funk/tropa.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+
+
+     <h2 id="Hip Hop" class="titulo_generos">Hip Hop</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/hiphop/DaBaby - BOP on Broadway.jpg" class="foto-musica">
+
+               <h3>BOP on Broadway<br>DaBaby</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/hiphop/DaBaby - BOP on Broadway.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/hiphop/Eminem - Godzilla ft. Juice WRLD.jpg" class="foto-musica">
+
+               <h3>Godzilla<br>Eminem ft. Juice WRLD</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/hiphop/Eminem - Godzilla ft. Juice WRLD.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/hiphop/Hungria Hip Hop - Nao Tenho Freio.jpg" class="foto-musica">
+
+               <h3>Não Tenho Freio<br>Hungria Hip Hop</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/hiphop/Hungria Hip Hop - Nao Tenho Freio.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/hiphop/Mc Sid e Tavin - Isso vale minha Vida.jpg" class="foto-musica">
+
+               <h3>Isso vale minha Vida<br>Mc Sid e Tavin</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/hiphop/Mc Sid e Tavin - Isso vale minha Vida.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/hiphop/Post Malone - Congratulations ft. Quavo.jpg" class="foto-musica">
+
+               <h3>Congratulations<br>Post Malone ft. Quavo</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/hiphop/Post Malone - Congratulations ft. Quavo.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/hiphop/Provavelmente - Hungria Hip Hop.jpg" class="foto-musica">
+
+               <h3>Provavelmente<br>Hungria Hip Hop</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/hiphop/Provavelmente - Hungria Hip Hop.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/hiphop/Quavo _ Takeoff - HOTEL LOBBY A COLORS SHOW.jpg" class="foto-musica">
+
+               <h3>HOTEL LOBBY A COLORS SHOW<br>Quavo & Takeoff</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/hiphop/Quavo _ Takeoff - HOTEL LOBBY.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+
+     <h2 id="Jazz" class="titulo_generos">Jazz</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/jazz/chancesdeerrar.jpg" class="foto-musica">
+
+               <h3>Chances de errar<br>Stef</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/jazz/chancesdeerrar.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/jazz/20ligações.jpg" class="foto-musica">
+
+               <h3>20 ligações<br>Baco Exu do Blues</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/jazz/20ligacoes.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/jazz/devoltaaoinicio.png" class="foto-musica">
+
+               <h3>De volta ao início<br>Sotam</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/jazz/devoltaaoinicio.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/jazz/solitude.jpg" class="foto-musica">
+
+               <h3>In my solitude<br>Etta James</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/jazz/solitude.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/jazz/risesthemoon.jpg" class="foto-musica">
+
+               <h3>Rises the moon<br>Liana Flores</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/jazz/risesthemoon.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/jazz/fascination.jpg" class="foto-musica">
+
+               <h3>Fascination<br>Nate King Cole</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/jazz/fascination.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/jazz/oneon.jpg" class="foto-musica">
+
+               <h3>On & On<br>Erykah Badu</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/jazz/oneon.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+
+     <h2 id="Kpop" class="titulo_generos">Kpop</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/kpop/flower.jpeg" class="foto-musica">
+
+               <h3>Flower<br>Jisoo</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/kpop/flower.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/kpop/solo.jpg" class="foto-musica">
+
+               <h3>Solo<br>Jennie</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/kpop/solo.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/kpop/gone.jpg" class="foto-musica">
+
+               <h3>Gone<br>Rosé</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/kpop/gone.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/kpop/money.jpg" class="foto-musica">
+
+               <h3>Money<br>Lisa</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/kpop/money.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/kpop/ps.jpg" class="foto-musica">
+
+               <h3>Pretty savage<br>Blackpink</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/kpop/ps.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/kpop/sd.jpg" class="foto-musica">
+
+               <h3>Shut down<br>Blackpink</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/kpop/sd.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/kpop/skz.jpg" class="foto-musica">
+
+               <h3>S-Class<br>Stray Kids</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/kpop/skz.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+
+<h2 id="MPB" class="titulo_generos">MPB</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/mpb/jorge.jpeg" class="foto-musica">
+
+               <h3>Amiga da minha mulher<br>Seu Jorge</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/mpb/jorge.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/mpb/medeummotivo.jpeg" class="foto-musica">
+
+               <h3>Me dê um motivo<br>Tim Maia</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/mpb/medeummotivo.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/mpb/skank.jpeg" class="foto-musica">
+
+               <h3>Ainda gosto dela<br>Skank</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/mpb/skank.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/mpb/casinhadesape.png" class="foto-musica">
+
+               <h3>Casinha de sapê<br>Tim Maia</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/mpb/casinhadesape.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/mpb/joaoemaria.jpg" class="foto-musica">
+
+               <h3>João e Maria<br>Chico Buarque</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/mpb/joaoemaria.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/mpb/marvin.jpg" class="foto-musica">
+
+               <h3>Marvin<br>Titãs</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/mpb/marvin.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/mpb/lancaperfume.jpg" class="foto-musica">
+
+               <h3>Lança Perfume<br>Rita Lee</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/mpb/lancaperfume.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+
+<h2 id="Pagode" class="titulo_generos">Pagode</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/pagode/Bom Gosto - Patricinha de Olho Azul.jpg" class="foto-musica">
+
+               <h3>Patricinha de Olho Azul<br>Bom Gosto</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pagode/Bom Gosto - Patricinha de Olho Azul.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pagode/Exaltasamba- Ta vendo aquela Lua.jpg" class="foto-musica">
+
+               <h3>Tá vendo aquela Lua<br>Exaltasamba</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pagode/Exaltasamba- Ta vendo aquela Lua.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pagode/PERICLES - MELHOR EU IR.jpg" class="foto-musica">
+
+               <h3>Melhor eu Ir<br>Péricles</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pagode/PERICLES - MELHOR EU IR.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pagode/Pericles - Se Eu Largar o Freio.jpg" class="foto-musica">
+
+               <h3>Se Eu Largar o Freio<br>Péricles</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pagode/Pericles - Se Eu Largar o Freio.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pagode/Sorriso Maroto - Sinais.jpg" class="foto-musica">
+
+               <h3>Sinais<br>Sorriso Maroto</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pagode/Sorriso Maroto - Sinais.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pagode/Thiaguinho - Buque de Flores.jpg" class="foto-musica">
+
+               <h3>Buquê de Flores<br>Thiaguinho</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pagode/Thiaguinho - Buque de Flores.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pagode/Turma do Pagode - Camisa 10.jpg" class="foto-musica">
+
+               <h3>Camisa 10<br>Turma do Pagode</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pagode/Turma do Pagode - Camisa 10.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+
+
+
+<h2 id="Pop" class="titulo_generos">Pop</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/pop/cardigan.png" class="foto-musica">
+
+               <h3>Cardigan<br>Taylor Swift</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pop/cardigan.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pop/lana.jpeg" class="foto-musica">
+
+               <h3>Summertime Sadness<br>Lana Del Rey</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pop/lana.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pop/harry.jpg" class="foto-musica">
+
+               <h3>Adore You<br>Harry Styles</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pop/harry.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pop/starboy.jpg" class="foto-musica">
+
+               <h3>Starboy<br>The Weeknd</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pop/starboy.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pop/top.jpg" class="foto-musica">
+
+               <h3>Stressed Out<br>Twenty One Pilots</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pop/top.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pop/rude.jpg" class="foto-musica">
+
+               <h3>Rude<br>MAGIC!</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pop/rude.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/pop/billie.jpg" class="foto-musica">
+
+               <h3>Happier Than Ever<br>Billie Eilish</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/pop/billie.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+<h2 id="Rap" class="titulo_generos">Rap</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/rap/2Pac.jfif" class="foto-musica">
+
+               <h3>All Eyez On Me<br>2PAC</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rap/2Pac.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rap/Fim.jfif" class="foto-musica">
+
+               <h3>Fim de semana no parque<br>Racionais Mcs</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rap/Fim.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rap/Negro.jfif" class="foto-musica">
+
+               <h3>Negro drama<br>Racionais Mcs</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rap/Negro.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rap/pimp.jfif" class="foto-musica">
+
+               <h3>P.I.M.P.<br>50 Cent</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rap/pimp.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rap/RZO.jfif" class="foto-musica">
+
+               <h3>Pirituba Parte 2<br>RZO</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rap/RZO.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rap/Sabotage.jfif" class="foto-musica">
+
+               <h3>Um Bom Lugar<br>Sabotage</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rap/Sabotage.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rap/Trilha.jfif" class="foto-musica">
+
+               <h3>Trilha Sonora Do Gueto<br>Pião di Vida Loka</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rap/Trilha.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+<h2 id="Reggae" class="titulo_generos">Reggae</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/reggae/Alborosie.jpg" class="foto-musica">
+
+               <h3>Alborosie<br>Kingston Town</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/reggae/Alborosie.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/reggae/Bob.jpg" class="foto-musica">
+
+               <h3>Is This Love<br>Bob Marley</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/reggae/Bob.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/reggae/Medication.jpg" class="foto-musica">
+
+               <h3>Gong Marley<br>Damian Jr. Gong Marley</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/reggae/Medication.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/reggae/Damian.jpg" class="foto-musica">
+
+               <h3>Welcome To Jamrock<br>Damian Jr. Gong Marley</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/reggae/Damian.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/reggae/Matue.jpg" class="foto-musica">
+
+               <h3>Cidade 2000<br>Matuê</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/reggae/Matue.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/reggae/Melo.jpg" class="foto-musica">
+
+               <h3>Cabeça de Gelo<br>Cleiton Rasta</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/reggae/Melo.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/reggae/Ras.jpg" class="foto-musica">
+
+               <h3>Zion Town<br>Ras Sparrow feat. Queen Sparrow</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/reggae/Ras.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+<h2 id="Rock" class="titulo_generos">Rock</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/rock/Fear.jpg" class="foto-musica">
+
+               <h3>Fear of the Dark<br>Iron Maiden</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rock/Fear.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rock/Guns.jpg" class="foto-musica">
+
+               <h3>Sweet Child O' Mine<br>Guns N' Roses</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rock/Guns.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rock/Metallica.jpg" class="foto-musica">
+
+               <h3>Nothing Else Matters<br>Metallica</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rock/Metallica.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rock/Nirvana.jpg" class="foto-musica">
+
+               <h3>Something In The Way<br>Nirvana</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rock/Nirvana.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rock/Numb.jpg" class="foto-musica">
+
+               <h3>Numb<br>Linkin Park</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rock/Numb.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rock/Scorpions.jpg" class="foto-musica">
+
+               <h3>Wind Of Change<br>Scorpions</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rock/Scorpions.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/rock/Titas.jpg" class="foto-musica">
+
+               <h3>Marvin<br>Titãs</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/rock/Titas.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+<h2 id="Samba" class="titulo_generos">Samba</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/samba/naodeixeosambamorrer.jpg" class="foto-musica">
+
+               <h3>Não deixe o samba morrer<br>Alcione</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/samba/naodeixeosambamorrer.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/samba/omarserenou.png" class="foto-musica">
+
+               <h3>O mar serenou<br>Clara Nunes</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/samba/omarserenou.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/samba/flordelis.jpg" class="foto-musica">
+
+               <h3>Flor de lis<br>Djavan</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/samba/flordelis.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/samba/agrandefamilia.jpg" class="foto-musica">
+
+               <h3>A grande familia<br>Dudu Nobre</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/samba/agrandefamilia.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/samba/eumerecoserfeliz.jpg" class="foto-musica">
+
+               <h3>Eu mereço ser feliz<br>Mumuzinho</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/samba/eumerecoserfeliz.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/samba/minhafilosofia.jpg" class="foto-musica">
+
+               <h3>Minha filosofia<br>Casuariana</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/samba/minhafilosofia.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/samba/deixaavidamelevar.jpg" class="foto-musica">
+
+               <h3>Deixa a vida me levar<br>Zeca Pagodinho</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/samba/deixaavidamelevar.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+<h2 id="Sertanejo" class="titulo_generos">Sertanejo</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/sertanejo/contramao.jfif" class="foto-musica">
+
+               <h3>Contramão<br>Gustavo Mioto</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/sertanejo/contramao.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/sertanejo/Gustavo.jfif" class="foto-musica">
+
+               <h3>Solteiro não Trai<br>Gustavo Mioto</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/sertanejo/Gustavo.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/sertanejo/culpa.jfif" class="foto-musica">
+
+               <h3>A Culpa É Nossa<br>Maiara e Maraisa</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/sertanejo/culpa
+                 .mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/sertanejo/Presepada.jfif" class="foto-musica">
+
+               <h3>Presepada<br>Maiara e Maraisa, Marília Mendonça</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/sertanejo/Presepada.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/sertanejo/BEBACA.jfif" class="foto-musica">
+
+               <h3>Bebaça<br>Marília Mendonça, Maiara e Maraisa</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/sertanejo/BEBACA.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/sertanejo/sem.jfif" class="foto-musica">
+
+               <h3>Sem Sal<br>Marília Mendonça</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/sertanejo/sem.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/sertanejo/Marilia.jfif" class="foto-musica">
+
+               <h3>Todo Mundo Menos Você<br>Marília Mendonça, Maiara e Maraisa</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/sertanejo/Marilia.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+     <hr class="hr-body" align="left">
+
+
+
+
+<h2 id="Trap" class="titulo_generos">Trap</h2>
+     <div class="row">
+
+          <div class="music">
+               <img src="imagens/musicas/trap/Matue.jpg" class="foto-musica">
+
+               <h3>Anos Luz<br>Matue</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/trap/Matue.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/trap/MC.jpg" class="foto-musica">
+
+               <h3>Cartão Black<br>MC Caverinha, Kayblack, Wall Hein</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/trap/MC.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/trap/Veigh.jpg" class="foto-musica">
+
+               <h3>Novo Balanço<br>Veigh</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/trap/VEIGH.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/trap/Recayd.jpg" class="foto-musica">
+
+               <h3>Plaqtudum<br>Recayd Mob</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/trap/Recayd.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/trap/Ryu.jpg" class="foto-musica">
+
+               <h3>Mantém o Pique<br>Ryu the Runner</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/trap/Ryu.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/trap/Assault.jpg" class="foto-musica">
+
+               <h3>Assault carro forte<br>Borges,Orochi,Chefin,Oruam,Bielzin</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/trap/Assault.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+          <div class="music">
+               <img src="imagens/musicas/trap/Kant.jpg" class="foto-musica">
+
+               <h3>Purgatório<br>Kant</h3>
+
+               <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+
+               <audio controls class="meu-audio plyr--audio">
+                 <source src="musicas/trap/Kant.mp3" type="audio/mp3">
+                 Seu navegador não suporta o elemento de áudio.
+               </audio>
+          </div><!--music-->
+
+     </div><!--row-->
+
+</div><!---->
+     
+
+  <script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const players = Array.from(document.querySelectorAll('.meu-audio'));
+      players.forEach(function(player) {
+        new Plyr(player, {
+          controls: ['play', 'progress'],
+          settings: [],
+          volume: null
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
